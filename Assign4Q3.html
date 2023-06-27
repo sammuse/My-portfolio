@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Answer Display</title>
+    <!-- <style>
+        .vl {
+            border-left: 6px solid green;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            margin-left: -3px;
+            top: 0;
+        }
+    </style> -->
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>
+                <h3>Input following data:</h3>
+            </th>
+            <th>
+                <h3>Answer the following:</h3>
+            </th>
+        </tr>
+        <tr>
+            <div class="vl"></div>
+            <td style="border-right: 2px solid;padding: 10px;">
+                <label for="data1">A. Enter First Number: </label>
+                <input type="text" id="data1"><br><br>
+                <label for="data2">B. Enter Second Number: </label>
+                <input type="text" id="data2"><br><br>
+                <label for="data3">C. Enter a String: </label>
+                <input type="text" id="data3"><br><br>
+            </td>
+
+            <td style="padding: 10px;">
+                <label for="question1">Question 1:</label>
+                <input type="text" id="question1" disabled><br><br>
+
+                <label for="question2">Question 2:</label>
+                <input type="text" id="question2" disabled><br><br>
+
+                <label for="question3">Question 3:</label>
+                <input type="text" id="question3" disabled><br><br>
+
+                <label for="question4">Question 4:</label>
+                <input type="text" id="question4" disabled><br><br>
+
+                <label for="question5">Question 5:</label>
+                <input type="text" id="question5" disabled><br><br>
+
+                <label for="question6">Question 6:</label>
+                <input type="text" id="question6" disabled><br><br>
+
+                <label for="question7">Question 7:</label>
+                <input type="text" id="question7" disabled><br><br>
+
+                <button id="answerButton">Answer</button>
+            </td>
+        </tr>
+
+    </table>
+    <script>
+        document.getElementById("answerButton").addEventListener("click", function () {
+            document.getElementById("question1").value = "Answer to Question 1";
+            document.getElementById("question2").value = "Answer to Question 2";
+            document.getElementById("question3").value = "Answer to Question 3";
+            document.getElementById("question4").value = "Answer to Question 4";
+            document.getElementById("question5").value = "Answer to Question 5";
+            document.getElementById("question6").value = "Answer to Question 6";
+            document.getElementById("question7").value = "Answer to Question 7";
+        });
+    </script>
+</body>
+
+</html>

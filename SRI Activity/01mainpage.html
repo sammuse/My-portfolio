@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="bar-chart-steps.svg" type="image/icon type">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .container1 {
+            background-color: #e3eef0;
+            padding: 0px;
+            padding-top: 0px;
+            height: 500px;
+        }
+
+        .navbar {
+            padding: px;
+        }
+
+        .btn {
+            display: inline-block;
+            font-weight: bold;
+            padding: 0.375rem 1rem;
+            height: 2.5rem;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 25px;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+        }
+
+        a.port-link {
+            color: red;
+        }
+
+        a:hover.nav-link {
+            color: #209bed;
+        }
+
+        .main-content {
+            padding-left: 40px;
+        }
+
+        .card-title {
+            /* font-size: 3rem; */
+            color: #000;
+        }
+
+        .card-text1 {
+            color: #000;
+            padding-top: 10px;
+            text-align: justify;
+        }
+
+        .left {
+            padding-top: 60px;
+            position: absolute;
+        }
+
+        /*this is styling for small icons for decoration  */
+        .triangle1 {
+            position: relative;
+            padding-left: 170px;
+            color: #f54748;
+            bottom: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            /* transform: rotate(180deg); */
+
+        }
+
+        .box1 {
+            position: relative;
+            padding-left: 200px;
+            color: #fe9d3e;
+            bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            /* transform: rotate(50deg); */
+        }
+
+        .disc1 {
+            position: relative;
+            padding-left: 70px;
+            color: #514bc9;
+            top: 120px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nut1 {
+            position: relative;
+            right: 50px;
+            color: #7dd48d;
+            bottom: 180px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* ----------- */
+
+        .svg-inline--fa {
+            height: 1rem;
+            overflow: visible;
+            vertical-align: -0.125em;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #f54748;
+            border-color: #f54748;
+        }
+
+        .circle.red {
+            display: inline-block;
+            border: 60px solid #f9a2a2;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            top: -50px;
+        }
+
+        .circle.grey {
+            display: inline-block;
+            border: 100px solid #d4ddde;
+            border-radius: 50%;
+            width: 500px;
+            height: 500px;
+        }
+
+        .middle-bar {
+            padding-top: 30px;
+        }
+
+        a.l1 {
+            width: 264px;
+            height: 65px;
+            border-radius: 10px;
+            color: #fff;
+            background-color: #242323;
+            transition: background-color 0.5s;
+            align-content: center;
+            justify-content: center;
+            margin-left: 30px;
+            margin-right: 30px;
+            box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, .5);
+        }
+
+        a:hover.l1 {
+            color: #242323;
+            background-color: #d4ddde;
+        }
+
+        .card {
+            height: 300px;
+            padding-left: 10px;
+            transition: background-color 0.5s;
+        }
+
+        .card:hover {
+            color: #fff;
+            background-color: #000;
+        }
+
+        .para-4row {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .i1 {
+            background-color: #ea4d48;
+            display: inline-block;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+
+        a:hover.i1 {
+            background-color: #fff;
+        }
+
+        .svg1 {
+            height: 50px;
+            width: 25px;
+        }
+
+        .svg2 {
+            height: 50px;
+            width: 25px;
+        }
+
+        .svg3 {
+            height: 50px;
+            width: 20px;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #e3eef0;
+            color: #000;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid container1">
+
+        <!-- this is the starting navbar and 1st row -->
+        <div class="navbar navbar-1">
+            <nav class="navbar navbar-expand-lg navbar-light shadow-5-strong" style="width: 100%; padding-left: 25px;">
+                <!-- <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2d2d39; width: 100%;"> -->
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"
+                        style="font-weight: bold; padding-left: 10px; padding-right: 10px; border: #000000 solid; ;letter-spacing: 5px;">
+                        SRC.
+                    </a>
+                    <div class="col-5">
+                        <ul class="navbar-nav">
+                            <li class="nav-item home-link">
+                                <a class="nav-link port-link" href="01mainpage.html">
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="02myportfolio.html">My Work</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="03contactuspage.html">Contact Us</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="04testimonialpage.html">Testimonial</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- <a class="navbar-brand" href="https://www.linkedin.com/in/sahil-mudhale-600b571aa/ "
+                        target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                    </a> -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">
+                            Search
+                        </button>
+                    </form>
+
+                </div>
+            </nav>
+        </div>
+
+        <!-- this is the 2nd row for text about me and image -->
+
+        <div class="main-content">
+            <div class="row">
+                <div class="col-md-7">
+                    <!--this is the left section-->
+                    <div class="left">
+                        <div class="card-body" style="padding-left: px;">
+                            <i class="bi bi-triangle triangle1"></i>
+                            <h5 class="card-title" style="font-size: 20px; padding-bottom: 10px;">
+                                Hi, I'm Sritam Roy Chowdhury
+                            </h5>
+                            <h5 class="card-title p-0" style="font-size: 3rem;">
+                                <b> PROGRAMMER</b>
+                            </h5>
+                            <!-- <img src="yellow.png" style="height: 20px; width: 150px; object-position: 0px 3px ;"> -->
+                            <!-- <hr style="width: 300px; border-width:5px; color: yellow; background-color: aliceblue;"> -->
+                            <p class="card-text1">
+                                I love to work in Data Analysis, Machine Learning, Python Programming <br> and much
+                                more.
+                                I always try my best to manipulate data for <br> better data analysis process.
+                            </p>
+                            <!-- this is for hire button -->
+                            <div style="padding-top: 10px;">
+                                <a class="btn btn-primary a1" href="./sritam Resume.pdf" target="_blank">
+                                    <svg class="svg-inline--fa fa-paper-plane me-2" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="paper-plane" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor" d="M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 
+                                        2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l
+                                        -50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v
+                                        -96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 
+                                        .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 
+                                        34 1.406S513.5 24.72 511.6 36.86z">
+                                        </path>
+                                    </svg>
+                                    Hire Me
+                                </a>
+                            </div>
+                            <i class="bi bi-box box1"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--this is the middle section-->
+                <div class="col-md-5 middle-main">
+                    <div class="middle">
+                        <img src="sritam.png" alt="My Image" style="height: 540px; width: 420px; margin-top: -113px; margin-left: -100px; 
+                            filter: drop-shadow(5px 0px 8px #000);">
+                        <i class="bi bi-disc disc1"></i>
+                        <i class="bi bi-nut-fill nut1"></i>
+                    </div>
+                </div>
+                <div class="circle red" style="margin-left: 1257px; margin-top: -620px;"></div>
+                <div class="circle grey" style="margin-left: -270px; margin-top: -550px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--this is 3rd row of the second container-->
+    <div class="container-fluid container2">
+        <!--this is the middle bar which has diff links  -->
+
+        <div class="navbar middle-bar">
+            <nav class="navbar navbar-light" style=" width: 100%; height: 100px; ">
+                <a class="nav l1" href="https://github.com/SritamRC" target="_blank"
+                    style="text-decoration: none; font-size: 20px;">
+                    <i class="bi bi-github"></i>
+                    <div style="padding-left: 5px;">Github</div>
+                </a>
+                <a class="nav l1" href="#" target="_blank" style="text-decoration: none; font-size: 20px">
+                    <div style="padding-left: 5px;">Linked <i class="bi bi-linkedin"></i></div>
+                </a>
+                <a class="nav l1" href="https://instagram.com/the_paranoid_man?igshid=MzNlNGNkZWQ4Mg==" target="_blank"
+                    style="text-decoration: none; font-size: 20px">
+                    <div style="padding-right: 5px;">Instagram <i class="bi bi-instagram"></i></div>
+                </a>
+                <a class="nav l1" href="https://twitter.com/Sritam_RC" target="_blank"
+                    style="text-decoration: none; font-size: 20px">
+                    <div style="padding-right: 5px;">Twitter <i class="bi bi-twitter"></i></div>
+                </a>
+            </nav>
+        </div>
+
+        <!-- this is 4th row for info and cards -->
+
+        <div class="row" style="padding-right: 80px;">
+            <div class="col-md-4" style="padding-left: 100px; padding-top: 100px;">
+                <p style="font-size: 90px;  ">
+                    +3
+                </p>
+                <p class="para-4row">
+                    Years Of Experience <br> Working
+                </p>
+            </div>
+
+            <div class="col-md-8">
+                <p style="font-size: 28px; font-weight: bold; padding-top: 30px;">
+                    I'm a Developer and Graphics Designer with a passion for <br> web design
+                </p>
+                <div class="row gx-0">
+                    <!-- 1st card -->
+                    <div class="col-sm-4">
+                        <div class="card" style="width: 16rem; padding-top: 145px;">
+                            <div class="card-body">
+                                <a class="i1" href="#" target="_blank">
+                                    <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 
+                                    67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 
+                                    33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 
+                                    42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 
+                                    11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 
+                                    53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 
+                                    55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 
+                                    54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 
+                                    11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z" />
+                                    </svg>
+                                </a>
+                                <h5 class="python1" style="padding-top: 20px;">Python Programmer</h5>
+                                <p class="card-text">Explore more</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd card -->
+                    <div class="col-sm-4">
+                        <div class="card" style="width: 16rem; padding-top: 145px;">
+                            <div class="card-body">
+                                <a class="i1" href="#" target="_blank">
+                                    <svg class="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H480c17.7 0 32 14.3 32 32s-14.3 32-32 
+                                    32H80c-44.2 0-80-35.8-80-80V64C0 46.3 14.3 32 32 32zM160 224c17.7 0 32 14.3 32 32v64c0 17.7-14.3 
+                                    32-32 32s-32-14.3-32-32V256c0-17.7 14.3-32 32-32zm128-64V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 
+                                    14.3-32 32-32s32 14.3 32 32zm64 32c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 
+                                    14.3-32 32-32zM480 96V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V96c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
+                                    </svg>
+                                </a>
+                                <h5 class="data1" style="padding-top: 20px;">Data Visualization</h5>
+                                <p class="card-text">Explore more</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <!-- 3rd card -->
+                    <div class="col-sm-4">
+                        <div class="card" style="width: 16rem; padding-top: 145px;">
+                            <div class="card-body">
+                                <a class="i1" href="#" target="_blank">
+                                    <svg class="svg3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 
+                                    31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 
+                                    10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 
+                                    44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 
+                                    16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" />
+                                    </svg>
+                                </a>
+                                <h5 class="graphic1" style="padding-top: 20px;">Graphic Designer</h5>
+                                <p class="card-text">Explore more</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" style="margin-top: 50px;">
+        <p style="padding: 10px; margin: 0px;font-size: 14px;">
+            &#169; Sritam Roy Chowdhury
+        </p>
+    </div>
+</body>
+
+</html>

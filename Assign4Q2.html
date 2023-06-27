@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Question 2</title>
+</head>
+
+<body>
+  <div name="div1">
+    Background of this will change
+  </div>
+  <button onclick="changebg()" name="colorchange">
+    change Color
+  </button>
+  <ul name="list"> </ul>
+  <input type="text" name="inp" value="">
+  <button onclick="addItem()" name="additm">
+    Add Item
+  </button>
+  <button onclick="removeItem()">
+    Remove Selected Items
+  </button>
+  <p id="itemCount">
+    Item Count: 0
+  </p>
+  <script>
+    function changebg() {
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      document.body.style.backgroundColor = "#" + randomColor;
+    }
+    function addItem() {
+      const list = document.getElementsByName('list')[0];
+      var input = document.getElementsByName("inp")[0];
+      var item = input.value; var listItem = document.createElement("li");
+      listItem.textContent = item; listItem.setAttribute('id', item);
+      list.appendChild(listItem); input.value = "";
+      updateItemCount()
+    }
+    function removeItem() {
+      const list = document.getElementsByName('list')[0];
+      var input = document.getElementsByName("inp")[0];
+      var item = document.getElementById(input.value);
+      list.removeChild(item);
+      updateItemCount()
+    }
+    function updateItemCount() {
+      var list = document.getElementsByName("list")[0];
+      var count = list.getElementsByTagName("li").length;
+      var countElement = document.getElementById("itemCount");
+      countElement.textContent = "Item Count: " + count;
+    } 
+  </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dynamic Background Color</title>
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Dynamic Background Color</h1>
+
+  <label for="colorSelect">Select Color:</label>
+  <select id="colorSelect" onchange="changeBackgroundColor(this.value)">
+    <option value="">-- Select a color --</option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+    <option value="yellow">Yellow</option>
+  </select>
+
+  <h1>List Control with Dropdown</h1>
+
+  <input type="text" id="itemInput" placeholder="Enter item">
+  <button onclick="addItem()">Add Item</button>
+  <select id="itemDropdown" onchange="selectItem()">
+    <option value="">-- Select an item --</option>
+  </select>
+  <button onclick="removeSelectedItem()">Remove Selected Item</button>
+
+  <p>Number of items in list: <span id="itemCount">0</span></p>
+
+
+
+  <ul id="myList"></ul>
+  <script>
+    function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+    const itemInput = document.getElementById('itemInput');
+    const itemDropdown = document.getElementById('itemDropdown');
+
+
+    function addItem() {
+      const item = itemInput.value.trim();
+      if (item) {
+        const list = document.getElementById('myList');
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        list.appendChild(listItem);
+        itemInput.value = '';
+
+        const dropdownOption = document.createElement('option');
+        dropdownOption.value = item;
+        dropdownOption.textContent = item;
+        itemDropdown.appendChild(dropdownOption);
+
+        updateItemCount();
+      }
+    }
+
+    function selectItem() {
+      const itemDropdown = document.getElementById('itemDropdown');
+      const selectedValue = itemDropdown.value;
+      const itemCountElement = document.getElementById('itemCount');
+
+      if (selectedValue !== "") {
+        itemCountElement.textContent = selectedValue;
+      } else {
+        itemCountElement.textContent = "0";
+      }
+    }
+
+    function removeSelectedItem() {
+      const itemDropdown = document.getElementById('itemDropdown');
+      const selectedIndex = itemDropdown.selectedIndex;
+
+      if (selectedIndex !== -1) {
+        const list = document.getElementById('myList');
+        const selectedOption = itemDropdown.options[selectedIndex];
+
+        list.removeChild(selectedOption);
+        itemDropdown.remove(selectedIndex);
+        itemDropdown.selectedIndex = -1;
+        updateItemCount();
+      }
+    }
+
+
+    // function removeSelectedItem() {
+    //   console.log("remove")
+    //   const list = document.getElementById('myList');
+    //   const selectedIndex = itemDropdown.selectedIndex;
+    //   if (selectedIndex !== -1) {
+    //     list.removeChild(list.children[selectedIndex]);
+    //     itemDropdown.remove(selectedIndex);
+    //     itemDropdown.selectedIndex = -1;
+    //     updateItemCount();
+    //   }
+    // }
+
+    function getItemCount() {
+      const list = document.getElementById('myList');
+      return list.children.length;
+    }
+
+    function updateItemCount() {
+      const countSpan = document.getElementById('itemCount');
+      if (countSpan) {
+        const itemCount = getItemCount();
+        countSpan.textContent = itemCount;
+      }
+    }
+
+    // function getItemCount() {
+    //   const list = document.getElementById('myList');
+    //   return list.children.length;
+    // }
+
+    function updateItemCount() {
+      const countSpan = document.getElementById('itemCount');
+      if (countSpan) {
+        const itemCount = getItemCount();
+        countSpan.textContent = itemCount;
+      }
+    }
+  </script>
+</body>
+
+</html> -->

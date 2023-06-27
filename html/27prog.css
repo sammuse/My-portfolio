@@ -1,0 +1,17 @@
+ h1 {
+         color:darkred;
+         font-size:30 ;
+      }
+ fieldset
+     {
+      height:530; 
+      width:420;
+      background-color:cccccc; 
+     }
+ input {
+              border-radius: 7px;
+              width: 185;
+              height: 38;
+              text-indent: 5px;
+            }
+      

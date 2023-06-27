@@ -1,0 +1,16 @@
+
+ body { background-color: skyblue; }
+ ul.first{
+     font-size:28; color: 0000ff; }
+ ul.second{
+     font-size:28; color: 009900; }
+ li.third{
+     font-size:28; color: 0000ff; }
+ li.fourth{
+     font-size:28; color: ffff00; }
+ li.fifth{
+     font-size:28; color: ffffff; }
+ li.sixth {
+     font-size:28; color: red; }
+ li.seventh {
+     font-size:28; color: ff00ff; } 

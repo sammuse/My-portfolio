@@ -1,0 +1,8 @@
+
+ body {background-image: url("abc1.jpg"); }
+ h1 {text-align:center;font-size:35;background-color:cccccc;
+     font-family:Comic Sans MS;color:0000ff; }
+ table {width:60%;height:60%;text-align:center;
+        color:ffffff }
+ tr,td {font-size:17; }
+ th {color:000000; }

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tilt+Prism&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* this is for the background images */
+        .priya-img {
+            position: absolute;
+            width: 380px;
+            height: 480px;
+            top: 90px;
+            left: 820px;
+            transition: transform 0.3s;
+        }
+
+        .priya-img:hover {
+            transform: scale(0.9);
+        }
+
+
+        .wire-img {
+            position: absolute;
+            width: 1300px;
+            height: 520px;
+            top: 75px;
+            left: 320px;
+            transition: left 0.5s;
+        }
+
+        /* ends */
+
+        /* this is for container 1 */
+        .container1 {
+            position: relative;
+            background-color: #ffffff;
+            padding: 15px;
+            padding-top: 0px;
+            height: 600px;
+
+        }
+
+        a.home-link {
+            color: #1a51e7;
+        }
+
+        a.about-link,
+        .testimonial-link,
+        .contact-link {
+            color: #000000;
+        }
+
+        a:hover.nav-link {
+            color: red;
+        }
+
+
+        .main-content {
+            position: relative;
+            padding-left: 50px;
+            padding-top: 30px;
+            /* text-align: left; */
+        }
+
+        .card-text1 {
+            color: #000000;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+        .card-title {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .left-section {
+            padding-top: 30px;
+        }
+
+        .svg-inline--fa {
+            height: 1rem;
+            overflow: visible;
+            vertical-align: -0.125em;
+        }
+
+        .btn {
+            border-radius: 25px;
+            border: none;
+            text-align: center;
+            cursor: pointer;
+            text-transform: uppercase;
+            outline: none;
+            overflow: hidden;
+            position: relative;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            background-color: #222;
+            padding: 15px 28px;
+            /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20); */
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 490%;
+            width: 140%;
+            background: #78c7d2;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+            -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+            transform: translateX(-98%) translateY(-25%) rotate(45deg);
+        }
+
+        .btn:hover:after {
+            -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+            transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        }
+
+        /* .btn-primary {
+            color: #fff;
+            background-color: #000077;
+            border-color: #000021;
+        } */
+
+        .i1 {
+            background-color: #000000;
+            display: inline-block;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            color: #16c3ee;
+        }
+
+        /* container 1 ends */
+
+        /* this is for container 2 */
+        .container2 {
+            background-color: #020243;
+            height: 600px;
+            padding: 10px;
+            padding-left: 60px;
+            padding-top: 30px;
+        }
+
+        .hl1 {
+            border-top: 3px solid #ffffff;
+            /* width: 1109px; */
+            width: 100%;
+        }
+
+        /* images and vertical lines starts here */
+
+        .vl1 {
+            border-left: 3px solid #ffffff;
+            height: 100px;
+        }
+
+        .image1 {
+            width: 280px;
+            height: 150px;
+            position: relative;
+            top: 40px;
+            left: -20px;
+            border: #000 solid;
+            transition: transform 0.3s;
+            border-radius: 20px;
+        }
+
+        .image1:hover {
+            transform: scale(1.2);
+        }
+
+        .vl2 {
+            border-left: 3px solid #ffffff;
+            height: 140px;
+        }
+
+        .image2 {
+            width: 280px;
+            height: 150px;
+            position: relative;
+            top: 60px;
+            left: -20px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+
+        .image2:hover {
+            transform: scale(1.2);
+        }
+
+        .vl3 {
+            border-left: 3px solid #ffffff;
+            height: 180px;
+        }
+
+        .image3 {
+            width: 280px;
+            height: 150px;
+            position: relative;
+            top: 80px;
+            left: -20px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+
+        .image3:hover {
+            transform: scale(1.2);
+        }
+
+        .vl4 {
+            border-left: 3px solid #ffffff;
+            height: 220px;
+        }
+
+        .image4 {
+            width: 280px;
+            height: 150px;
+            position: relative;
+            top: 100px;
+            left: -20px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+
+        .image4:hover {
+            transform: scale(1.2);
+        }
+
+        /* images and vertical lines ends here */
+
+        footer {
+            background-color: #0e0e1a;
+            display: flex;
+            justify-content: space-evenly;
+            height: 60px;
+        }
+
+        footer .footer-rights {
+            color: gray;
+            padding-top: 3px;
+        }
+
+        .footer {
+            color: gray;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. this is the first container which contains the first half of faint gray color -->
+
+    <div class="container-fluid container1">
+        <div class="parent">
+            <img src="bg5.png" alt="background" class="wire-img">
+            <img src="priya-img1.jpg" alt="priya-img" class="priya-img">
+        </div>
+        <div class="navbar navbar-1">
+            <nav class="navbar navbar-light"
+                style=" width: 100%; background-color: #ffffff; box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.15);">
+                <div class="col-md-2 px-3">
+                    <a class="navbar-brand"
+                        href="https://www.hostinger.in/tutorials/portfolio-website-examples?ppc_campaign=google_search_generic_hosting_all&bidkw=defaultkeyword&lo=9304071&gclid=CjwKCAjw1MajBhAcEiwAagW9MU40C31TXXVkxs200flFWT8RWixm5iSTh1TGvbUwBj7SnEsvO4adZxoCpb8QAvD_BwE"
+                        style="color: #000000; font-weight: bold;">
+                        <span style="font-family: 'Dancing Script', cursive; font-size: 28px;letter-spacing: 3px;
+                            border: #000000 solid; padding-left: 8px; padding-right: 8px;">
+                            Priya.
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-8">
+                    <ul class="nav" style="padding-left: 100px;">
+                        <li class="nav-item text-capitalize">
+                            <a class="nav-link home-link" href="01home_page.html">my portfolio</a>
+                        </li>
+                        <li class="nav-item text-capitalize">
+                            <a class="nav-link about-link" href="02aboutpage.html">about</a>
+                        </li>
+                        <li class="nav-item text-capitalize">
+                            <a class="nav-link testimonial-link" href="03testimonialpage.html">testimonial</a>
+                        </li>
+                        <li class="nav-item text-capitalize">
+                            <a class="nav-link contact-link" href="04contactmepage.html">contact me</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <i class="bi bi-palette-fill me-5"></i>
+                    <a class="navbar-brand" href="https://www.linkedin.com/in/priya-thorat-302099211"
+                        target="_blank">
+                        <i class="bi bi-linkedin" style="color: #000000;"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- this is the 2nd row for text about me and image -->
+
+        <div class="main-content">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!--this is the left section-->
+
+                    <div class="left-section">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: #000000;">Hi There,
+                            </h5>
+                            <h5 class="card-title pt-3" style="color: #000000;">I'm Priya <span
+                                    style="color: #f59c02">Thorat</span>
+                            </h5>
+                            <!-- <img src="yellow.png" style="height: 20px; width: 150px; object-position: 0px 3px ;"> -->
+                            <div class="card-text1 pt-3">
+                                I Am into <span id="element" style="color: #a00000;font-weight: bold;"></span>
+                            </div>
+
+                            <div class="wrapper" style="padding-top: 30px;">
+                                <a class="btn btn-primary " href="#">
+                                    <span> About Me </span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-cloud-arrow-down-fill mx-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 
+                                        1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 
+                                        1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 
+                                        3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 
+                                        0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+                            <script>
+                                var typed = new Typed('#element', {
+                                    strings: ['UI/UX Design', 'Frontend Develop', 'Mobile App Develop'],
+                                    typeSpeed: 50,
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!-- this is for social media handles -->
+            <div class="row" style="padding-top: 25px;">
+                <div class="col-md-12">
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/priya-thorat-302099211" target="_blank">
+                            <i class="bi bi-linkedin p-2 i1"></i></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://www.linkedin.com/in/priya-thorat-302099211" target="_blank">
+                            <i class="bi bi-github p-2 i1"></i></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://www.linkedin.com/in/priya-thorat-302099211" target="_blank">
+                            <i class="bi bi-twitter p-2 i1"></i></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://www.instagram.com/_priyathorat/" target="_blank">
+                            <i class="bi bi-instagram p-2 i1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- this is container2 which has diff sections -->
+
+    <div class="container-fluid container2">
+        <section class="second-section">
+            <p style="color: #ffffff;font-size: 20px;">
+                <u>What I have done so far</u>
+            </p>
+            <div class="card col-3" style="width: 280px; height: 50px;">
+                <div class="card-body" style="text-align:center; padding-left: 0px; padding-top: 5px;">
+                    <p style="color: #000; font-size: 30px;font-weight: bold;">
+                        Work Experience
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="hl1"></div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="vl1">
+                        <div style="color: #ffffff; padding-left: 5px;padding-top: 40px;">
+                            Project (2010-2012)
+                        </div>
+                        <img class="image1" src="poster2.jpg">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="vl2">
+                        <div style="color: #ffffff; padding-left: 5px;padding-top: 60px;">
+                            Java Developer (2010-2012)
+                        </div>
+                        <img class="image2" src="poster3.jpg">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="vl3">
+                        <div style="color: #ffffff; padding-left: 5px;padding-top: 80px;">
+                            Python (2010-2012)
+                        </div>
+                        <img class="image3" src="poster2.jpg">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="vl4">
+                        <div style="color: #ffffff; padding-left: 5px;padding-top: 100px;">
+                            Python (2010-2012)
+                        </div>
+                        <img class="image4" src="poster3.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <h4>Priya's Developer Portfolio</h4>
+        <div class="footer-rights">
+            Copyright - &#169;priyasportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <!-- 
+    <div class="footer" style="margin-top: 20px;">
+        <p style=" margin: 0px;font-size: 14px;">
+            &#169; Priya Thorat
+        </p>
+    </div> -->
+</body>
+
+</html>

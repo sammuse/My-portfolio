@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" required><br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" required><br><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      var nameInput = document.getElementById("name");
+      var emailInput = document.getElementById("email");
+      var passwordInput = document.getElementById("password");
+      var phoneInput = document.getElementById("phone");
+      var dobInput = document.getElementById("dob");
+
+      var name = nameInput.value.trim();
+      var email = emailInput.value.trim();
+      var password = passwordInput.value.trim();
+      var phone = phoneInput.value.trim();
+      var dob = dobInput.value;
+
+      // Name validation
+      var nameRegex = /^[A-Za-z\s]+$/;
+      if (!nameRegex.test(name)) {
+        alert("Please enter a valid name (only letters and spaces allowed).");
+        nameInput.focus();
+        return;
+      }
+
+      // Email validation
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        emailInput.focus();
+        return;
+      }
+
+      // Password validation
+      var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert("Please enter a valid password (minimum eight characters, at least one letter and one number).");
+        passwordInput.focus();
+        return;
+      }
+
+      // Phone number validation
+      var phoneRegex = /^\d{10}$/;
+      if (!phoneRegex.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        phoneInput.focus();
+        return;
+      }
+
+      // Date of Birth validation
+      var today = new Date();
+      var minDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+      if (new Date(dob) >= minDate) {
+        alert("You must be at least 18 years old to register.");
+        dobInput.focus();
+        return;
+      }
+
+      // All validations passed, proceed with form submission
+      alert("Registration successful!");
+
+      document.getElementById("registrationForm").reset();
+    });
+  </script>
+</body>
+</html>
